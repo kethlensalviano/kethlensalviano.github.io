@@ -11,17 +11,17 @@ body {
   flex-direction: column;
 }
 
-.attribution {
+footer {
   font-size: 11px;
   text-align: center;
   padding: 1em;
 }
 
-.attribution a {
+footer a {
   color: hsl(228, 45%, 44%);
 }
 
-.content {
+main {
   display: flex;
   justify-content: center;
   flex: 1;
