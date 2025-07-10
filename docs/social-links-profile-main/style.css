@@ -1,0 +1,81 @@
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey700: hsl(0, 0%, 20%);
+    --grey800: hsl(0, 0%, 12%);
+    --grey900: hsl(0, 0%, 8%);
+    --blue: hsl(228, 45%, 44%);
+}
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    background-color: var(--grey900);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+article {
+    background-color: var(--grey800);
+    max-width: 100%;
+    width: 20rem;
+    height: 35rem;
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+.profile-image {
+    border-radius: 6.25rem;
+    width: 6rem;
+    height: 6rem;
+
+}
+
+.location {
+    color: var(--green);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    flex: 1;
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+    border-radius: 0.5rem;
+    background-color: var(--grey700);
+}
+
+button:hover {
+    background-color: var(--green);
+    color: var(--grey700);
+}
+
+footer {
+    font-size: 11px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--blue);
+}
