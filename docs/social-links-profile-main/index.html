@@ -1,37 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Frontend Mentor | Social links profile</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-</head>
-<body>
+    <title>Frontend Mentor | Social links profile</title>
+  </head>
+  <body>
+    <main>
+      <article id="article">
+        <div id="theme-toggle">
+          <i
+            id="sun-icon"
+            class="fas fa-sun"
+            style="color: gold; font-size: 24px; cursor: pointer"
+          ></i>
+          <i
+            id="moon-icon"
+            class="fas fa-moon"
+            style="color: gray; font-size: 24px; cursor: pointer; display: none"
+          ></i>
+        </div>
 
-  <main>
-    <article>
-      <img class="profile-image" src="./assets/images/avatar-jessica.jpeg" alt="Profile Picture"/>
-      <h1>Jessica Randall</h1>
-      <p class="location">London, United Kingdom</p>
-      <p>"Front-end developer and avid reader."</p>
+        <img
+          class="profile-image"
+          src="./assets/images/avatar-jessica.jpeg"
+          alt="Profile Picture"
+        />
+        <h1>Jessica Randall</h1>
+        <p id="city">London, United Kingdom</p>
+        <p>"Front-end developer and avid reader."</p>
 
-      <ul>
-        <li><button>GitHub</button></li>
-        <li><button>Frontend Mentor</button></li>
-        <li><button>LinkedIn</button></li>
-        <li><button>Twitter</button></li>
-        <li><button>Instagram</button></li>
-      </ul>
-    </article>
-  </main>
-  
-  <footer>
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Kethlen Salviano</a>.
-  </footer>
-</body>
+        <ul>
+          <li><button class="button button-dark">GitHub</button></li>
+          <li><button class="button button-dark">Frontend Mentor</button></li>
+          <li><button class="button button-dark">LinkedIn</button></li>
+          <li><button class="button button-dark">Twitter</button></li>
+          <li><button class="button button-dark">Instagram</button></li>
+        </ul>
+      </article>
+    </main>
+
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Kethlen Salviano</a>.
+    </footer>
+
+    <script>
+      // colors
+      const green = "hsl(75, 94%, 57%)";
+      const lavender = "hsl(270, 60%, 75%)";
+      const white = "hsl(0, 0%, 100%)";
+      const grey700 = "hsl(0, 0%, 20%)";
+      const grey800 = "hsl(0, 0%, 12%)";
+      const grey900 = "hsl(0, 0%, 8%)";
+      const blue = "hsl(228, 45%, 44%)";
+      const lightgrey = "hsl(0, 0%, 95%)";
+
+      const sunIcon = document.getElementById("sun-icon");
+      const moonIcon = document.getElementById("moon-icon");
+      const article = document.getElementById("article");
+      const city = document.getElementById("city");
+      const body = document.body;
+
+      sunIcon.addEventListener("click", () => {
+        body.style.backgroundColor = white;
+        body.style.color = grey900;
+        article.style.background = lightgrey;
+        city.style.color = lavender;
+        applyLightThemeToButtons();
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline";
+      });
+
+      moonIcon.addEventListener("click", () => {
+        body.style.backgroundColor = grey900;
+        body.style.color = white;
+        article.style.backgroundColor = grey800;
+        city.style.color = green;
+        applyDarkThemeToButtons();
+        moonIcon.style.display = "none";
+        sunIcon.style.display = "inline";
+      });
+
+      function applyDarkThemeToButtons() {
+        let buttons = document.getElementsByClassName("button");
+        for (let button of buttons) {
+          button.classList.remove("button-light");
+          button.classList.add("button-dark");
+        }
+      }
+
+      function applyLightThemeToButtons() {
+        let buttons = document.getElementsByClassName("button");
+        for (let button of buttons) {
+          button.classList.add("button-light");
+          button.classList.remove("button-dark");
+        }
+      }
+    </script>
+  </body>
 </html>
