@@ -13,10 +13,11 @@ body {
   min-height: 100vh;
   margin: 0;
   text-align: center;
+  font-size: 14px;
 }
 
 p {
-  font-size: 14px;
+  font-size: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -44,7 +45,7 @@ article {
   background-color: var(--grey800);
   max-width: 100%;
   width: 20rem;
-  height: 35rem;
+  height: 37rem;
   border-radius: 1rem;
   padding: 3rem;
   position: relative;
@@ -115,4 +116,28 @@ footer {
 
 footer a {
   color: var(--blue);
+}
+
+/* Phones */
+@media (max-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+
+  article {
+      width: 60%;
+      height: 60%;
+      padding: 1.5rem;
+  }
+
+  .profile-image {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #theme-toggle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
 }
