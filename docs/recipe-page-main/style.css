@@ -1,0 +1,92 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone100: hsl(30, 54%, 90%);
+  --stone150: hsl(30, 18%, 87%);
+  --stone600: hsl(30, 10%, 34%);
+  --stone900: hsl(24, 5%, 18%);
+  --brown800: hsl(14, 45%, 36%);
+  --rose800: hsl(332, 51%, 32%);
+  --rose50: hsl(330, 100%, 98%);
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  color: var(--stone600);
+}
+
+body {
+  background-color: var(--stone100);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 40rem;
+  align-self: center;
+  background-color: white;
+  padding: 2rem;
+  margin: 6rem;
+  border-radius: 20px;
+}
+
+img {
+  width: 40rem;
+  height: 20rem;
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: 'Young Serif', sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: var(--stone900);
+  margin: 1rem 0 1rem 0;
+}
+
+h3 {
+  font-family: 'Young Serif', sans-serif;
+  color: var(--brown800);
+  font-weight: 400;
+}
+
+.preparation {
+  background-color: var(--rose50);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.preparation h4 {
+  color: var(--rose800);
+  margin: 0;
+  font-size: large;
+}
+
+.preparation ul li {
+  padding-bottom: 1rem;
+}
+
+.preparation ul li:last-child {
+  padding-bottom: 0;
+}
+
+p {
+  margin: 0 0 2rem 0;
+}
+
+hr {
+  border: none; 
+  border-top: 1px solid var(--stone150);
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+}
+footer a {
+  color: hsl(228, 45%, 44%);
+}
